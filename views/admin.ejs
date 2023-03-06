@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hello admin </title>
+    <script type = "text/JavaScript">
+      function AutoRefresh( t ) {
+         setTimeout("location.reload(true);", t);
+      }
+</script>
+    <style>
+      body {
+             background-color: #C2DED1;
+           }
+           
+           h1 {
+             color: #100577e2;
+             text-align: center;
+           }
+           p{
+            color: #03220fe3;
+            text-align: center;
+           }
+           table{
+            text-align: left;
+            overflow: hidden;
+            width: 80%;
+            margin: 0 auto;
+            display: table;
+            padding: 0 0 8em 0;
+           }
+           th h1 {
+	          font-weight: bold;
+            font-size: 1em;
+            text-align: center;
+            color: #fff;
+           }
+          td {
+            font-weight: normal;
+            font-size: 1em;
+            box-shadow: 0 2px 2px -2px #0E1119;
+          }
+
+          td, th {
+            padding: 10px 12px 10px 12px;
+          }
+          table, th, td {
+            border:1px solid black;
+          }
+       </style>
+</head>
+<body  onload = "JavaScript:AutoRefresh(10000);">
+  <h1><br><br><br>Welcome to ATN shop</h1>
+ 
+    <div class="selectBox">
+            <%- selectBox %>
+        </select>
+     </div>
+     <h1>The list of product</h1>
+     <div> <%- result %> </div>
+     <h1>
+      <p>Exit your system:
+        <a href="/login" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
+      </p> 
+     </h1>
+    
+</body>
+</html>

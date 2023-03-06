@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+             background-color: #C2DED1;
+           }
+           
+           h1 h2 {
+             color: #100577e2;
+             text-align: center;
+           }
+           p{
+            color: #03220fe3;
+            text-align: center;
+           }
+           table{
+            text-align: left;
+            overflow: hidden;
+            width: 80%;
+            margin: 0 auto;
+            display: table;
+            padding: 0 0 8em 0;
+           }
+           th h1 { 
+	          font-weight: bold;
+            font-size: 1em;
+            text-align: center;
+            color: #fff;
+           }
+          td {
+            font-weight: normal;
+            font-size: 1em;
+            box-shadow: 0 2px 2px -2px #0E1119;
+          }
+
+          td, th {
+            padding: 10px 12px 10px 12px;
+          }
+          table, th, td {
+            border:1px solid black;
+          }
+       </style>
+  </head>
+  <body>
+    <div id="header_message">
+      <h1><br>Welcome to ATN Shop</h1>
+      <h2>List of products</h2>
+    </div>
+    <div>
+    </div>
+    <h1>
+      <div class="form_login">
+        <div class="row">
+          <table class="container">
+            <thead>
+              <th><p>Id</p></th>
+              <th><p>Product name</p></th>
+              <th><p>Quantity</p></th>
+              <th><p>Price</p></th>
+              <th><p>Shop</p></th>
+            </thead>
+            <%- products %>
+          </table>
+        </div>
+        <p>Exit your system:
+          <a href="/login" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-log-out"></span> Log out
+          </a>
+        </p> 
+      </div>
+    </h1>
+    
+  </body>
+</html>
